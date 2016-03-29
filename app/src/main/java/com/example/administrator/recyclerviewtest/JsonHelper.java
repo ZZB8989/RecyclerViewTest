@@ -21,6 +21,10 @@ public class JsonHelper {
         }
         return sGson;
     }
+    public static String objectToJson(Object obj) {
+        String strJson = getGson().toJson(obj);
+        return strJson;
+    }
     public static <T> T jsonToObject(String json, Type tokenType) {
         T t = null;
         try {
